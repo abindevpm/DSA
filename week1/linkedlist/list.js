@@ -52,12 +52,22 @@ class Node {
            }
            curr.next = null
       }
+
+      middle(){
+        let slow = this.head
+        let fast = this.head
+         while(fast && fast.next){
+            slow = slow.next
+            fast = fast.next.next
+         }
+         console.log(slow.value)
+      }
+
+
       
 
 
-
-
-
+      
      
       display(){
           let curr = this.head
@@ -79,6 +89,7 @@ class Node {
   list.append(4)
   list.deletestart()
   list.deleteEnd()
+  list.middle()
   
   
   
