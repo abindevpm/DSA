@@ -34,6 +34,13 @@ class Node {
            
       }
       
+
+       deletestart(){
+        if(!this.head) return
+         this.head = this.head.next
+       }
+
+
      
       display(){
           let curr = this.head
@@ -53,6 +60,7 @@ class Node {
   list.prepend(2)
   list.append(3)
   list.append(4)
+  list.deletestart()
   
   
   
