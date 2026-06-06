@@ -40,6 +40,23 @@ class Node {
          this.head = this.head.next
        }
 
+      deleteEnd(){
+          if(!this.head) return 
+          if(!this.head.next){
+              this.head = null
+              return
+          }
+          let curr = this.head
+           while(curr.next.next){
+               curr = curr.next
+           }
+           curr.next = null
+      }
+      
+
+
+
+
 
      
       display(){
@@ -61,6 +78,7 @@ class Node {
   list.append(3)
   list.append(4)
   list.deletestart()
+  list.deleteEnd()
   
   
   
