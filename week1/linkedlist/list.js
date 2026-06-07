@@ -63,6 +63,26 @@ class Node {
          console.log(slow.value)
       }
 
+      middledelete(){
+        if(!this.head) return
+        if(!this.head.next){
+            this.head = null
+            return 
+        }
+        let slow = this.head
+        let fast = this.head
+        let prev = null
+
+         while(fast && fast.next){
+            prev = slow
+            slow = slow.next
+            fast  = fast.next.next
+         }
+         prev.next = slow.next
+
+      }
+
+
 
       
 
@@ -90,7 +110,7 @@ class Node {
   list.deletestart()
   list.deleteEnd()
   list.middle()
-  
+  list.middledelete()
   
   
   
