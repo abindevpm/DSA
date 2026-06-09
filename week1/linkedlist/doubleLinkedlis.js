@@ -39,6 +39,17 @@ class Node {
          this.tail = node
       }
       
+       middle(){
+          let slow = this.head
+          let fast = this.head
+          
+           while(fast && fast.next){
+               slow = slow.next
+               fast = fast.next.next
+           }
+           console.log(slow.value)
+      }
+      
       
       
       
@@ -64,6 +75,7 @@ class Node {
     list.prepend(2)
     list.prepend(3)
     list.append()
+    list.middle()
 
     
      list.display()
