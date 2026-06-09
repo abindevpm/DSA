@@ -49,6 +49,20 @@ class Node {
            }
            console.log(slow.value)
       }
+
+        middleDelete(){
+          let prev = null
+          let slow = this.head
+          let fast = this.head
+          
+          while(fast && fast.next){
+              prev = slow
+              slow = slow.next
+              fast = fast.next.next
+          }
+          prev.next = slow.next
+      }
+      
       
       
       
@@ -76,6 +90,7 @@ class Node {
     list.prepend(3)
     list.append()
     list.middle()
+    list.middleDelete()
 
     
      list.display()
