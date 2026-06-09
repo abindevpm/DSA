@@ -26,6 +26,14 @@ class Node {
                this.head.prev= node
            }
       }
+      
+      
+      
+      
+      
+      
+      
+      
        display(){
            let curr = this.head
            let s = ''
@@ -43,6 +51,8 @@ class Node {
     const list = new DoubleLinkedlist()
     list.prepend(1)
     list.prepend(2)
+    list.prepend(3)
+
     
      list.display()
     
