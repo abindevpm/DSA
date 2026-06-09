@@ -27,6 +27,17 @@ class Node {
            }
       }
       
+      append(value){
+        const node = new Node (value)
+        if(!this.head){
+            this.head = node 
+            this.tail = node
+            return 
+        }
+         this.tail.next = node
+         node.prev = this.tail
+         this.tail = node
+      }
       
       
       
@@ -52,6 +63,7 @@ class Node {
     list.prepend(1)
     list.prepend(2)
     list.prepend(3)
+    list.append()
 
     
      list.display()
