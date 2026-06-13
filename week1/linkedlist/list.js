@@ -95,6 +95,27 @@ class Node {
       }
 
 
+      deleteValue(value){
+        if(!this.head){
+            return 
+        }
+        if(this.head.value === value){
+            this.head = this.head.next
+            return
+        }
+        let curr = this.head
+        while(curr.next){
+            if(curr.next.value === value){
+                curr.next = curr.next.next
+                return
+            }
+             curr = curr.next
+        }
+      }
+
+      
+
+
 
 
 
@@ -123,7 +144,7 @@ class Node {
   list.middle()
   list.middledelete()
   list.reverse()
-  
+  list.deleteValue(7)
   
   
   list.display()           
