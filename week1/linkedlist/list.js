@@ -114,12 +114,6 @@ class Node {
       }
 
       
-
-
-
-
-
-      
      
       display(){
           let curr = this.head
