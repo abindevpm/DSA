@@ -108,10 +108,40 @@ class Node {
             if(curr.next.value === value){
                 curr.next = curr.next.next
                 return
-            }
+            }   
              curr = curr.next
         }
       }
+      
+
+      insert(index,value){
+        if(index<0 || index>this.size){
+            return false
+        }
+         if(index === 0){
+            this.prepend(value)
+            return true
+         }
+         const node = new Node (value)
+         let prev = this.head 
+
+         for(let i = 0;i<index-1;i++){
+            prev = prev.next
+         }
+         node.next = prev.next
+         prev.next = node
+
+         this.size++
+         return true
+
+
+      }
+
+
+
+
+
+
 
       
      
@@ -139,6 +169,7 @@ class Node {
   list.middledelete()
   list.reverse()
   list.deleteValue(7)
+  list.insert(3,3000)
   
   
   list.display()           
