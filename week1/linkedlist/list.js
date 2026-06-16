@@ -137,6 +137,22 @@ class Node {
 
       }
 
+      removeDup(){
+        let curr = this.head
+        while(curr){
+            let temp = curr
+
+            while(temp.next){
+                if(temp.next.value === curr.value){
+                    temp.next = temp.next.next
+                }else{
+                    temp = temp.next
+                }
+            }
+            curr = curr.next
+        }
+      }
+
 
 
 
@@ -170,6 +186,7 @@ class Node {
   list.reverse()
   list.deleteValue(7)
   list.insert(3,3000)
+  list.removeDup()
   
   
   list.display()           
