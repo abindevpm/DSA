@@ -154,6 +154,7 @@ class Node {
       }
 
       
+      
 
       search(value){
     let curr = this.head
@@ -207,6 +208,8 @@ class Node {
   list.deleteValue(7)
   list.insert(3,3000)
   list.removeDup()
+
+  console.log(list.search(3))
   
   
   list.display()           
