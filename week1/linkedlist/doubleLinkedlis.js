@@ -79,6 +79,18 @@ class Node {
 }
 
 
+deletefrst(){
+    if(!this.head){
+        return 
+    }
+    if(!this.head.next){
+        this.head = null
+        this.tail = null
+        return 
+    }
+    this.head =  this.head.next
+    this.head.prev = null
+}
 
 
 
