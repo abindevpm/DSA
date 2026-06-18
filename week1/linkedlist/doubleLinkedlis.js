@@ -63,6 +63,27 @@ class Node {
           prev.next = slow.next
       }
       
+
+      reverseDouble(){
+    let curr = this.head
+    while(curr){
+        let temp = curr.next
+        curr.next = curr.prev
+        curr.prev = temp
+        
+        curr = temp
+    }
+    let temp = this.head
+    this.head = this.tail
+    this.tail = temp
+}
+
+
+
+
+
+
+
       
       
       
@@ -87,9 +108,11 @@ class Node {
     list.prepend(2)
     list.prepend(3)
     list.append()
+     list.reverse()
     list.middle()
     list.middleDelete()
 
+   
     
      list.display()
     
