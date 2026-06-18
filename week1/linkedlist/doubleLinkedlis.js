@@ -95,6 +95,21 @@ deletefrst(){
 
 
 
+deletelast(){
+    if(!this.tail){
+        return 
+    }
+     if(!this.head.next){
+        this.head = null
+        this.tail = null
+        return
+     }
+     this.tail = this.tail.prev
+     this.tail.next = null
+}
+
+
+
 
       
       
@@ -123,6 +138,8 @@ deletefrst(){
      list.reverse()
     list.middle()
     list.middleDelete()
+    list.deletefrst()
+    list.deletelast()
 
    
     
