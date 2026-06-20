@@ -111,10 +111,7 @@ deletelast(){
 
 
 
-      
-      
-      
-      
+    
       
        display(){
            let curr = this.head
