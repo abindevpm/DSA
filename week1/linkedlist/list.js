@@ -95,6 +95,7 @@ class Node {
       }
 
 
+
       deleteValue(value){
         if(!this.head){
             return 
@@ -109,10 +110,11 @@ class Node {
                 curr.next = curr.next.next
                 return
             }   
-             curr = curr.next
+             curr = curr.next       
         }
       }
       
+
 
       insert(index,value){
         if(index<0 || index>this.size){
@@ -136,6 +138,8 @@ class Node {
 
 
       }
+
+
 
       removeDup(){
         let curr = this.head
@@ -175,12 +179,6 @@ class Node {
 
 
 
-
-
-
-
-
-      
      
       display(){
           let curr = this.head
