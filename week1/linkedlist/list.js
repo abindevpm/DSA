@@ -160,20 +160,20 @@ class Node {
       
       
 
-      search(value){
-    let curr = this.head
-    let index = 0
+        search(value){
+        let curr = this.head
+        let index = 0
 
-    while(curr){
-        if(curr.value === value){
-            return index
+        while(curr){
+            if(curr.value === value){
+                return index
+            }
+            curr = curr.next
+            index++
         }
-        curr = curr.next
-        index++
-    }
 
-    return -1
-}
+        return -1
+    }
 
 
 
