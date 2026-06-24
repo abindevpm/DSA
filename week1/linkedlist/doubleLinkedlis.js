@@ -86,7 +86,7 @@ deletefrst(){
     if(!this.head.next){
         this.head = null
         this.tail = null
-        return 
+        return  
     }
     this.head =  this.head.next
     this.head.prev = null
@@ -107,6 +107,44 @@ deletelast(){
      this.tail = this.tail.prev
      this.tail.next = null
 }
+
+
+
+deleteValue(value){
+    if(!this.head){
+        return false
+    }
+    let curr = this.head
+    while(curr){
+        if(curr.value === value){
+            if(curr===this.head){
+                this.head = curr.next
+                
+                if(this.head){
+                    this.head.prev = null
+                }
+            }
+            else{
+                if(curr.prev){
+                    curr.prev.next = curr.next
+                }
+                if(curr.next){
+                    curr.next.prev = curr.prev
+                }
+                
+            }
+            this.size--
+            return true
+        }
+        curr = curr.next
+    }
+    return false
+}
+
+
+
+
+
 
 
 
