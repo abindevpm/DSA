@@ -20,6 +20,8 @@ class Node {
               this.head = node
           }
       }
+
+      
       append(value){
           const node = new Node (value)
            if(this.head === null){
