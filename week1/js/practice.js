@@ -14,3 +14,12 @@ for(let i = 0;i<a.length;i++){
 }
 
 console.log(result)
+
+
+// reversing a string function 
+
+function reverse(str){
+    return str.split("").reverse("").join("")
+}
+
+console.log(reverse("hell"))
