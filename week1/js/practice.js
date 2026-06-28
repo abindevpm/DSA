@@ -23,3 +23,12 @@ function reverse(str){
 }
 
 console.log(reverse("hell"))
+
+
+//   frst letter capitaizing
+
+let a = ["hello", "world"]
+
+ let b = a.map((num)=>num[0].toUpperCase()+num.slice(1))
+ 
+ console.log(b)
