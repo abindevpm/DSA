@@ -35,20 +35,20 @@ let a = ["hello", "world"]
 
  // remove Odd without inbuilt || array
 
+    let a = [1,2,3,4,5,6]
+
  function removeOdd(arr){
-    
-     let j = 0;
-    for(let i = 0;i<a.length;i++){
-         if(a[i]%2==0){
-             a[j] = a[i]
+     
+      let j = 0;
+     for(let i = 0;i<arr.length;i++){
+         if(arr[i]%2==0){
+             arr[j] = arr[i]
              j++
          }
-         
-    }
-    a.length = j
-    return arr
+     }
+     arr.length = j
+     return arr
     
-    
-}
-
-console.log(removeOdd(a))
+ }
+ 
+ console.log(removeOdd(a))
