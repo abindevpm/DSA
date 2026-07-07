@@ -61,7 +61,7 @@ class Node {
               fast = fast.next.next
           }
           prev.next = slow.next
-      }
+      } 
       
 
       reverseDouble(){
