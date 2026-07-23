@@ -74,3 +74,26 @@ let a = ["hello", "world"]
 }
 
 console.log(removeDup([1,2,3,1,2,3]))
+
+
+
+// count uppercase characters in array of strings
+
+let a = ["Redmi","realme",-1,2,"Oppo",10,"jio"]
+
+let count = 0;
+
+for(let i = 0;i<a.length;i++){
+    if(typeof a[i] === "string"){
+        
+        for(let j=0;j<a[i].length;j++){
+            if(a[i][j]>="A" && a[i][j]<="Z"){
+                count++
+            }
+        }
+        
+        
+    }
+}
+
+console.log(count)
