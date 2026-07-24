@@ -97,3 +97,23 @@ for(let i = 0;i<a.length;i++){
 }
 
 console.log(count)
+
+
+//  finding common elements in 2 arrays
+
+let a = [1,2,3]
+let b = [3,4,5]
+
+
+for(let i = 0;i<a.length;i++){
+    for(let j = 0;j<b.length;j++){
+        if(a[i] === b[j]){
+            console.log(a[i])
+        }
+    }
+}
+
+
+ 
+
+
