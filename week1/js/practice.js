@@ -128,6 +128,30 @@ let a = [1,3,4,6]
      expect++
  }
 
+
+ // finding first Non Repeating character in a string
+
+ let a = "abcdabce"
+
+ let freq = {};
+
+for(let i = 0;i<a.length;i++){
+    let item = a[i]
+    freq[item] = (freq[item] || 0)+1
+}
+
+
+for(let i = 0;i<a.length;i++){
+    if(freq[a[i]] === 1){
+        console.log(a[i])
+        break
+    }
+}
+
+
+
+
+
  
 
 
