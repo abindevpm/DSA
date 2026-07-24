@@ -114,6 +114,20 @@ for(let i = 0;i<a.length;i++){
 }
 
 
+//  find missing number in an array 
+
+let a = [1,3,4,6]
+
+ let expect = 1
+ 
+ for(let i = 0;i<a.length;i++){
+     while(a[i]!==expect){
+         console.log(expect)
+         expect++
+     }
+     expect++
+ }
+
  
 
 
