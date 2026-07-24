@@ -148,6 +148,38 @@ for(let i = 0;i<a.length;i++){
     }
 }
 
+// second Non Repeating Character in a string 
+
+ let a = "abcdabce"
+
+ let freq = {}
+ 
+ for(let i = 0;i<a.length;i++){
+     let item = a[i]
+     freq[item] = (freq[item] || 0)+1
+ }
+ 
+ let count = 0
+ 
+  for(let i = 0;i<a.length;i++){
+      if(freq[a[i]] === 1){
+          count++
+          
+          
+          if(count === 2){
+              console.log(a[i])
+              break
+          }
+          
+          
+      }
+  }
+  
+
+ 
+ 
+
+
 
 
 
