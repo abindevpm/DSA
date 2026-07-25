@@ -11,7 +11,26 @@ class circularLinkedlist{
         this.tail = null
         this.size= 0
     }
-    
+
+
+
+        prepend(value){
+        const node = new Node (value)
+        if(!this.head){
+            this.head = node 
+            this.tail = node 
+            node.next = this.head
+        }else{
+            node.next = this.head
+            this.head = node 
+            this.tail.next = this.head
+        }
+    }
+
+
+
+
+
     
     display(){
         if(!this.head){
