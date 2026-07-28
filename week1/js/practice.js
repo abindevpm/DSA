@@ -194,6 +194,32 @@ for(let i = 0;i<a.length;i++){
       }
   }
 
+
+  // Replacing NON repeating character  with another character
+
+  let a = "abcdabce"
+
+ let freq = {};
+ 
+ let result = ''
+
+ for(let i = 0;i<a.length;i++){
+     let item = a[i]
+     freq[item] = (freq[item] || 0)+1
+ }
+ 
+for(let i = 0;i<a.length;i++){
+    if(freq[a[i]] === 1){
+        result+="0"
+    }else{
+        result+=a[i]
+    }
+}
+
+console.log(result)
+
+ 
+
  
  
 
