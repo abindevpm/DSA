@@ -218,6 +218,26 @@ for(let i = 0;i<a.length;i++){
 
 console.log(result)
 
+// Removing NON repeating character in a string
+
+let a = "abcdabce"
+
+ let freq = {};
+ let result = ''
+ 
+ for(let i = 0;i<a.length;i++){
+     let item = a[i]
+     freq[item] = (freq[item] || 0)+1
+ }
+ 
+ for(let i = 0;i<a.length;i++){
+     if(freq[a[i]]>1){
+         result+=a[i]
+     }
+ }
+ 
+ console.log(result)
+
  
 
  
