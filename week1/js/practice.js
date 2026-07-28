@@ -238,6 +238,33 @@ let a = "abcdabce"
  
  console.log(result)
 
+
+ // Finding the Max Occurence Elements in an arrary
+
+
+let arr = [1,1,1,1,1,1,2,3,3,3,4,4,4]
+
+let freq = {}
+
+let max = 0;
+ let maxElement;
+ 
+  for(let i = 0;i<arr.length;i++){
+       let item = arr[i]
+       
+       freq[item] = (freq[item] || 0)+1   
+  }
+  
+   for(let i in freq){
+       if(freq[i]>max){
+            max = freq[i]
+            maxElement = i
+       }
+   }
+   
+   console.log(maxElement)
+   
+    
  
 
  
