@@ -331,6 +331,22 @@ for(let i = a.length-1;i>=0;i--){
 }
 
 console.log(a)
+
+// string title UpperCasing without slice and inbuilt
+
+let str = "hello world abii"
+
+let result = "";
+
+for(let i = 0;i<str.length;i++){
+    if(i === 0 || str[i-1] === " "){
+        result+=str[i].toUpperCase()
+    }else{
+        result+=str[i].toLowerCase()
+    }
+}
+
+console.log(result)
   
 
 
