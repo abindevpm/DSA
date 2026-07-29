@@ -347,6 +347,35 @@ for(let i = 0;i<str.length;i++){
 }
 
 console.log(result)
+
+
+// Target Element Finding in 2 d array
+
+let arr = [
+    [1, 2, 3],
+    [4, 5,6],
+    [7, 8, 9]
+];
+
+let target = 5;
+let found = false
+
+for(let i= 0;i<arr.length;i++){
+    for(let j = 0;j<arr[i].length;j++){
+        if(arr[i][j] === target){
+            found = true
+        }
+    }
+}
+
+if(found){
+    console.log("Target found")
+}else{
+    console.log("Not Found")
+}
+
+
+
   
 
 
