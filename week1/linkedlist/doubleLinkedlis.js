@@ -109,37 +109,40 @@ deletelast(){
 }
 
 
-
-deleteValue(value){
-    if(!this.head){
-        return false
-    }
-    let curr = this.head
-    while(curr){
-        if(curr.value === value){
-            if(curr===this.head){
-                this.head = curr.next
-                
-                if(this.head){
-                    this.head.prev = null
-                }
+ deleteValue(value){
+            if(!this.head){
+                return false
             }
-            else{
-                if(curr.prev){
-                    curr.prev.next = curr.next
-                }
-                if(curr.next){
-                    curr.next.prev = curr.prev
-                }
-                
-            }
-            this.size--
-            return true
+             let curr = this.head
+             while(curr){
+                 if(curr.value === value){
+                     if(curr === this.head){
+                         this.head = curr.next
+                         
+                         if(this.head){
+                             this.head.prev = null
+                         }else{
+                             this.tail =null
+                         }
+                         
+                     } else if(curr === this.tail){
+                         this.tail = curr.prev
+                         this.tail.next = null
+                     }else{
+                         curr.prev.next = curr.next
+                         curr.next.prev = curr.prev
+                      
+                     }
+                     return true
+                      
+                 }
+                 curr = curr.next
+             }
+             return false
         }
-        curr = curr.next
-    }
-    return false
-}
+        
+        
+
 
 
 
@@ -175,6 +178,8 @@ deleteValue(value){
     list.middleDelete()
     list.deletefrst()
     list.deletelast()
+
+    list.deleteValue()
 
    
     
