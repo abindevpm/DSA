@@ -263,6 +263,39 @@ let max = 0;
    }
    
    console.log(maxElement)
+
+   // Remove First NON repeating value in string
+
+   let a = "abcdabce"
+
+ let freq = {};
+ 
+ let result = ""
+ 
+ for(let i = 0;i<a.length;i++){
+     let item = a[i]
+     freq[item] = (freq[item] || 0)+1
+ }
+ 
+  let count = 0
+ 
+  for(let i = 0;i<a.length;i++){
+      if(freq[a[i]] === 1){
+          count++
+          
+          if(count === 1){
+              continue
+          }
+          
+          
+      }
+      result+=a[i]
+  }
+  
+  console.log(result)
+  
+
+
    
     
  
