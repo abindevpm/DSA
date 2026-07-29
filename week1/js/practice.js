@@ -293,7 +293,7 @@ let max = 0;
   }
   
   console.log(result)
-  
+
 
   //  Move all 0 to the end of the array
 
@@ -308,6 +308,26 @@ for(let i = 0;i<a.length;i++){
          a[j] = temp
          j++
      }
+}
+
+console.log(a)
+
+
+
+// Move all 0 to the beginniing of the array
+
+let a = [1, 2, 0, 3, 4, 0];
+
+ let j  = a.length-1
+ 
+
+for(let i = a.length-1;i>=0;i--){
+    if(a[i]!==0){
+        let temp = a[i]
+        a[i] = a[j]
+        a[j] = temp
+        j--
+    }
 }
 
 console.log(a)
