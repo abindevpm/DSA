@@ -375,6 +375,20 @@ if(found){
 }
 
 
+// Extract Number from ths string
+
+let str = "abc123xyz45";
+
+let result = ''
+
+ for(let i= 0;i<str.length;i++){
+     if(str[i]>="0"&&str[i]<="9"){
+         result+=str[i]
+     }
+ }
+ console.log(result)
+
+
 
   
 
