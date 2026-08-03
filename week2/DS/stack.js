@@ -11,6 +11,11 @@ class Stack {
        pop(){
         return this.items.pop()
     }
+
+       peek(){
+       return this.items[this.items.length-1]
+   }
+
     
     
     
@@ -30,6 +35,10 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 
+stack.pop()
+
+
+console.log(stack.peek())
 
 
 stack.display()
