@@ -16,6 +16,10 @@ class Stack {
        return this.items[this.items.length-1]
    }
 
+      isEmpty(){
+       return this.items.length===0
+   }
+    
     
     
     
@@ -39,6 +43,8 @@ stack.pop()
 
 
 console.log(stack.peek())
+console.log(stack.isEmpty())
+
 
 
 stack.display()
