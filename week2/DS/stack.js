@@ -23,6 +23,10 @@ class Stack {
        size(){
         return this.items.length
     }
+
+      clear(){
+        this.items = []
+    }
     
     
     
@@ -49,6 +53,8 @@ stack.pop()
 console.log(stack.peek())
 console.log(stack.isEmpty())
 console.log(stack.size())
+
+stack.clear()
 
 
 
