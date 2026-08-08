@@ -19,6 +19,11 @@ class HashTable {
         this.table[index] = [key,value]
         
     }
+
+      get(key){
+        let index  = this.hash(key)
+        return this.table[index]
+    }
     
     
     
@@ -30,6 +35,8 @@ ht.set("name",10)
 ht.set('name',22)
 
 console.log(ht.table)
+console.log(ht.get("name"))
+
 
 
 
