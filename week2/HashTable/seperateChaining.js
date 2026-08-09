@@ -35,6 +35,19 @@ class HashTable {
         bucket.push([key,value])
     }
     
+
+      get(key){
+        let index = this.hash(key)
+         let bucket = this.table[index]
+         
+         for(let  pair of bucket){
+             if(pair[0] === key){
+                 return pair[1]
+             }
+         }
+         return undefined
+         
+    }
     
     
     
@@ -59,3 +72,4 @@ ht.set("name",100)
 ht.set("name",33)
 
 ht.display()
+ console.log(ht.get("abindev"))
