@@ -24,8 +24,17 @@ class HashTable {
         let index  = this.hash(key)
         return this.table[index]
     }
-    
-    
+
+
+
+        display(){
+        for(let i = 0;i<this.table.length;i++){
+            if(this.table[i]){
+                console.log(i,this.table[i])
+            }
+        }
+    }
+
     
 }
 
@@ -34,9 +43,11 @@ const ht = new HashTable (10)
 ht.set("name",10)
 ht.set('name',22)
 
-console.log(ht.table)
+
 console.log(ht.get("name"))
 
+
+ht.display()
 
 
 
