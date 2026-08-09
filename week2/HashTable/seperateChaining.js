@@ -48,6 +48,19 @@ class HashTable {
          return undefined
          
     }
+
+     remove(key){
+        let index = this.hash(key)
+        let bucket = this.table[index]
+        
+        for(let i = 0;i<bucket.length;i++){
+            if(bucket[i][0] === key){
+                bucket.splice(i,1)
+                return true
+            }
+        }
+        return false
+    }
     
     
     
@@ -73,3 +86,4 @@ ht.set("name",33)
 
 ht.display()
  console.log(ht.get("abindev"))
+ ht.remove("name")
