@@ -13,6 +13,6 @@ function insertionSort(arr){
     }
     return arr
 }
-
+ 
 
 console.log(insertionSort([8,4,5,9,2,1]))
