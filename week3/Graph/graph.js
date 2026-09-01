@@ -25,6 +25,15 @@ class Graph {
   }
 
 
+
+  display(){
+    for(let vertex in this.adjacencylist){
+        console.log(`${vertex}-->${[...this.adjacencylist[vertex]]}`)
+    }
+}
+
+
+
     
 
 
@@ -40,4 +49,4 @@ let graph = new Graph()
 
  graph.addEdge("A","B")
 
-console.log(graph)
+graph.display()
