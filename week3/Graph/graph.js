@@ -24,6 +24,15 @@ class Graph {
 
   }
 
+    removeEdge(vertex1,vertex2){
+    this.adjacencylist[vertex1].delete(vertex2)
+    this.adjacencylist[vertex2].delete(vertex1)
+  }
+
+
+
+
+
 
 
   display(){
@@ -48,5 +57,7 @@ let graph = new Graph()
  graph.addVertex("B")
 
  graph.addEdge("A","B")
+
+ graph.removeEdge("A","B")
 
 graph.display()
