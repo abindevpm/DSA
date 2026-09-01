@@ -10,6 +10,21 @@ class Graph {
     }
   }
 
+    addEdge(vertex1,vertex2){
+    if(!this.adjacencylist[vertex1]){
+        this.addVertex(vertex1)
+    }
+
+     if(!this.adjacencylist[vertex2]){
+        this.addVertex(vertex2)
+     }
+
+       this.adjacencylist[vertex1].add(vertex2)
+       this.adjacencylist[vertex2].add(vertex1)
+
+  }
+
+
     
 
 
@@ -21,5 +36,8 @@ class Graph {
 let graph = new Graph()
 
  graph.addVertex("A")
+ graph.addVertex("B")
+
+ graph.addEdge("A","B")
 
 console.log(graph)
