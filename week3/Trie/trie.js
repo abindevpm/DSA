@@ -22,5 +22,24 @@ class Trie{
         node.isEnd = true
     }
 
+     
+
+      search(word){
+        let node = this.root
+
+         for(let ch of word){
+            if(!node.children[ch]){
+                return false
+            }
+            node = node.children[ch]
+         }
+         return node.isEnd 
+
+
+      }
+
+
+
+
 }
 
