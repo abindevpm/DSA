@@ -30,6 +30,25 @@ class Graph {
   }
 
 
+  removeVertex(vertex){
+    if(!this.adjacencylist[vertex]){
+        return 
+    }
+
+       for(let neighbor of this.adjacencylist[vertex]){
+          this.adjacencylist[neighbor].delete(vertex)
+       }
+       delete this.adjacencylist[vertex]
+
+   }
+
+
+   hasEdge(vertex1,vertex2){
+    return this.adjacencylist[vertex1].has(vertex2)
+}
+
+
+
 
 
 
@@ -59,5 +78,9 @@ let graph = new Graph()
  graph.addEdge("A","B")
 
  graph.removeEdge("A","B")
+
+  graph.removeVertex("A")
+
+  console.log(graph.hasEdge("A","B"))
 
 graph.display()
