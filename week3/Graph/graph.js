@@ -49,6 +49,32 @@ class Graph {
 
 
 
+bfs(start){
+
+let visited = {}
+let queue = [start]
+visited[start] = true
+
+while(queue.length>0){
+    let vertex = queue.shift()
+    console.log(vertex)
+
+   for(let neighbor of this.adjacencylist[vertex]){
+      if(!visited[neighbor]){
+        visited[neighbor] = true
+        queue.push(neighbor)
+      }
+   }
+
+}
+
+
+}
+
+
+
+
+
 
 
 
@@ -82,5 +108,7 @@ let graph = new Graph()
   graph.removeVertex("A")
 
   console.log(graph.hasEdge("A","B"))
+
+  graph.bfs("A")
 
 graph.display()
