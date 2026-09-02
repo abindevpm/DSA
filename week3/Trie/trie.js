@@ -35,8 +35,22 @@ class Trie{
          }
          return node.isEnd 
 
-
       }
+
+      startWith(prefix){
+    let node = this.root
+
+   for(let ch of prefix){
+    if(!node.children[ch]){
+        return false
+    }
+    node = node.children[ch]
+   }
+   return true
+     
+  }
+
+
 
 
 
