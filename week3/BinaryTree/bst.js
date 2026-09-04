@@ -37,6 +37,29 @@ class BST {
         }
      }
 
+     
+search(value,node=this.root){
+    if(node === null){
+        return false
+    }
+     if(value === node.value){
+        return true
+     }
+
+      if(value<node.value){
+        return this.search(value,node.left)
+      }else{
+        return this.search(value,node.right)
+      }
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -60,5 +83,9 @@ let tree = new BST()
 tree.insert(22)
 tree.insert(10)
 tree.insert(1)
+
+
+console.log(tree.search(10))
+
 
 tree.inorder()
