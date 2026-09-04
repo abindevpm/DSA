@@ -54,6 +54,21 @@ search(value,node=this.root){
 }
 
 
+ min(root = this.root){
+    if(!root.left){
+        return root.value
+    }
+    return this.min(root.left)
+ }
+
+
+max(root = this.root){
+    if(!root.right){
+        return root.value
+    }
+    return this.max(root.right)
+}
+
 
 
 
@@ -89,3 +104,6 @@ console.log(tree.search(10))
 
 
 tree.inorder()
+
+console.log(tree.min())
+console.log(tree.max())
