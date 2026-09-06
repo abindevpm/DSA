@@ -52,8 +52,51 @@ class Trie{
 
 
 
+  autocomplete(prefix){
+        
+        let node = this.root
+
+        for(let ch of prefix){
+            if(!node.children[ch]){
+                return []
+            }
+            node = node.children[ch]
+        }
+        let result = []
+        this.collectionWord(node,prefix,result)
+        return result
+
+    }
+
+    collectionWord(node,prefix,result){
+        if(node.isEnd){
+            result.push(prefix)
+        }
+
+        for(let ch in node.children){
+            this.collectionWord(
+                node.children[ch],
+                prefix+ch,
+                result
+            )
+        }
+
+    }
 
 
 
 }
 
+
+let trie = new Trie()
+
+trie.insert("cat")
+trie.insert("bat")
+trie.insert("car")
+
+
+
+console.log(trie.root)
+
+console.log(trie.search("cat"))
+console.log(trie.autocomplete("c"))
