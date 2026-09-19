@@ -72,6 +72,22 @@ while(queue.length>0){
 }
 
 
+dfs(start,visited = {}){
+    visited[start]  = true
+    console.log(start)
+
+ for(let neighbor of this.adjacencylist[start]){
+    if(!visited[neighbor]){
+        this.dfs(neighbor,visited)
+    }
+ }
+
+}
+
+
+
+
+
 
 
 
@@ -110,5 +126,7 @@ let graph = new Graph()
   console.log(graph.hasEdge("A","B"))
 
   graph.bfs("A")
+
+  graph.dfs("C")
 
 graph.display()
