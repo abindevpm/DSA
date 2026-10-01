@@ -85,6 +85,23 @@ dfs(start,visited = {}){
 }
 
 
+hasCycle(start,visited = {},parent = null){
+    visited[start] = true
+
+   for(let neighbor of this.adjacencylist[start]){
+    if(!visited[neighbor]){
+        if(this.hasCycle(neighbor,visited,start)){
+            return true
+        }
+    }else if(neighbor!==parent){
+        return true
+    }
+   }
+   return false
+
+}
+
+
 
 
 
@@ -130,3 +147,6 @@ let graph = new Graph()
   graph.dfs("C")
 
 graph.display()
+
+
+console.log(graph.hasCycle("A"))
