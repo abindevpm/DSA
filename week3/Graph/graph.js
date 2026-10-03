@@ -147,6 +147,3 @@ let graph = new Graph()
   graph.dfs("C")
 
 graph.display()
-
-
-console.log(graph.hasCycle("A"))

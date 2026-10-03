@@ -88,6 +88,24 @@ max(root = this.root){
     this.inorder(node.right)
    }
 
+
+   
+Preorder(node = this.root){
+    if(node === null){
+        return
+    }
+
+    console.log(node.value)
+    this.Preorder(node.left)
+    this.Preorder(node.right)
+
+}
+
+
+
+
+
+
 }
 
 
@@ -104,6 +122,7 @@ console.log(tree.search(10))
 
 
 tree.inorder()
+tree.Preorder()
 
 console.log(tree.min())
 console.log(tree.max())
