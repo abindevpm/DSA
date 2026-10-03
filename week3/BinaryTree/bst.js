@@ -103,6 +103,21 @@ Preorder(node = this.root){
 
 
 
+PostOrder(node = this.root){
+    if(node === null){
+        return
+    }
+
+  this.PostOrder(node.left)
+  this.PostOrder(node.right)
+  console.log(node.value)
+
+}
+
+
+
+
+
 
 
 
@@ -123,6 +138,7 @@ console.log(tree.search(10))
 
 tree.inorder()
 tree.Preorder()
+  tree.PostOrder()
 
 console.log(tree.min())
 console.log(tree.max())
