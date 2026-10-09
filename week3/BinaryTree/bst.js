@@ -138,7 +138,7 @@ console.log(tree.search(10))
 
 tree.inorder()
 tree.Preorder()
-  tree.PostOrder()
+tree.PostOrder()
 
 console.log(tree.min())
 console.log(tree.max())

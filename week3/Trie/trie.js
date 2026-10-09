@@ -85,6 +85,31 @@ class Trie{
 
 
 
+remove(word){
+    let node = this.root
+
+  for(let ch of word){
+    if(!node.children[ch]){
+        return false
+    }
+     node =node.children[ch]
+  }
+
+   if(!node.isEnd){
+    return false
+   }
+
+   node.isEnd = false
+   return true
+
+
+}
+
+
+
+
+
+
 }
 
 
@@ -100,3 +125,6 @@ console.log(trie.root)
 
 console.log(trie.search("cat"))
 console.log(trie.autocomplete("c"))
+
+
+trie.remove("appu")
