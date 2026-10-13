@@ -85,6 +85,38 @@ height(node = this.root){
 
 
 
+degree(root,value){
+    if(root === null){
+        return -1
+    }
+
+   if(root.value === value){
+    
+     let count = 0;
+
+     if(root.left) count++
+     if(root.right) count++
+
+      return count
+
+   }
+
+   if(value<root.value){
+    return this.degree(root.left,value)
+   }
+return this.degree(root.right),value
+
+ }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -159,3 +191,5 @@ console.log(tree.min())
 console.log(tree.max())
 
 console.log(tree.height())
+
+  console.log(tree.degree(tree.root,10))
