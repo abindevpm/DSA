@@ -71,6 +71,21 @@ max(root = this.root){
 
 
 
+height(node = this.root){
+    if(node === null){
+        return -1
+    }
+
+ let left = this.height(node.left)
+ let right = this.height(node.right)
+
+  return 1+Math.max(left,right)
+
+}
+
+
+
+
 
 
 
@@ -142,3 +157,5 @@ tree.PostOrder()
 
 console.log(tree.min())
 console.log(tree.max())
+
+console.log(tree.height())
