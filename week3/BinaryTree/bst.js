@@ -110,6 +110,45 @@ return this.degree(root.right),value
 
 
 
+ 
+kthLargest(k){
+
+let count = 0;
+let result = null
+
+ function reverseInorder(node){
+
+  if(node === null || count>=k){
+    return
+  }
+
+  reverseInorder(node.right)
+
+   count++
+
+  if(count === k){
+    result = node.value
+    return
+  }
+
+  reverseInorder(node.left)
+
+
+
+ }
+
+ reverseInorder(this.root)
+ return result
+ 
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -189,3 +228,6 @@ console.log(tree.max())
 console.log(tree.height())
 
   console.log(tree.degree(tree.root,10))
+
+  
+ console.log(tree.kthLargest(2))
