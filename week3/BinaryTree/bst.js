@@ -156,15 +156,6 @@ let result = null
 
 
 
-
-
-
-
-
-
-
-
-
    inorder(node = this.root){
     if(node === null){
         return
