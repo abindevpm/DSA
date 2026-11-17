@@ -54,20 +54,17 @@ search(value,node=this.root){
 }
 
 
- min(root = this.root){
-    if(!root.left){
-        return root.value
-    }
-    return this.min(root.left)
- }
 
-
-max(root = this.root){
-    if(!root.right){
-        return root.value
+min(node = this.root){
+    if(!node.left){
+        return node.value
     }
-    return this.max(root.right)
+    return this.min(node.left)
 }
+
+
+
+
 
 
 
@@ -146,7 +143,6 @@ let result = null
  return result
  
 }
-
 
 
 
