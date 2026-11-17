@@ -64,6 +64,17 @@ min(node = this.root){
 
 
 
+max(node = this.root){
+    if(!node.right){
+        return node.value
+    }
+  return this.max(node.right)
+}
+
+
+
+
+
 
 
 
