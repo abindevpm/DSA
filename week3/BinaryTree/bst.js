@@ -93,6 +93,30 @@ height(node = this.root){
 
 
 
+isBalanced(node = this.root){
+
+ if(node === null){
+    return true
+ }
+
+let leftHeight = this.height(node.left)
+let rightHeight = this.height(node.right)
+
+ if(Math.abs(leftHeight-rightHeight)>1){
+     return false
+ }
+
+
+ return this.isBalanced(node.left) &&
+ this.isBalanced(node.right)
+
+}
+
+
+
+
+
+
 degree(value,node = this.root){
     if(node === null){
         return -1
