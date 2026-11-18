@@ -181,6 +181,35 @@ let result = null
 
 
 
+ kthSmallest(k){
+
+ let count = 0;
+ let result = null
+
+ function inorder(node){
+    if(node === null || count>k){
+        return
+    }
+
+  inorder(node.left)
+  count++
+
+
+   if(count === k){
+    result = node.value
+    return
+   }
+
+   inorder(node.right)
+
+
+ }
+
+ inorder(this.root)
+ return result
+
+
+ }
 
 
 
@@ -259,3 +288,5 @@ console.log(tree.height())
 console.log(tree.degree(1))
   
  console.log(tree.kthLargest(2))
+
+  console.log(tree.kthSmallest(2))
