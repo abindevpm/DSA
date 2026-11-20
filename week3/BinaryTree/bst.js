@@ -212,6 +212,39 @@ let result = null
  }
 
 
+ secondlargest(){
+    
+ if(!this.root) return null
+
+ let current = this.root
+ let parent = null
+
+while(current.right){
+
+ parent = current
+ current = current.right
+
+}
+
+ if(current.left){
+    current = current.left
+
+  while(current.right){
+    current = current.right
+  }
+  return current.value
+
+ }
+
+return parent ? parent.value :null
+
+ }
+
+
+
+
+
+
 
 
 
@@ -290,3 +323,6 @@ console.log(tree.degree(1))
  console.log(tree.kthLargest(2))
 
   console.log(tree.kthSmallest(2))
+
+  
+console.log(tree.secondlargest())
