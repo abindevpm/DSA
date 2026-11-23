@@ -275,6 +275,24 @@ return result
 
 
 
+ sumofleadNode(){
+
+function sum(node){
+
+ if(node === null){
+    return 0
+ }
+
+ if(node.left === null && node.right === null){
+    return node.value
+ }
+
+return sum(node.left)+sum(node.right)
+
+}
+return sum(this.root) 
+
+ }
 
 
 
@@ -369,5 +387,7 @@ console.log(tree.degree(1))
 console.log(tree.secondlargest())
 
 
-
 console.log(tree.thirdLargest())
+
+
+ console.log(tree.sumofleadNode())
