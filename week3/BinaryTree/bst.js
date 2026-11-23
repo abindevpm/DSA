@@ -243,6 +243,47 @@ return parent ? parent.value :null
 
 
 
+ 
+thirdLargest(){
+
+ let count = 0;
+ let result = null
+
+ function reverseInorder(node){
+  if(node === null ||count>=3){
+    return 
+  }
+
+ reverseInorder(node.right)
+ count++
+
+if(count === 3){
+    result = node.value
+    return 
+}
+
+reverseInorder(node.left)
+
+ }
+
+  reverseInorder(this.root)
+
+return result
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -326,3 +367,7 @@ console.log(tree.degree(1))
 
   
 console.log(tree.secondlargest())
+
+
+
+console.log(tree.thirdLargest())
