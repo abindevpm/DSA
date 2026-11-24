@@ -297,6 +297,48 @@ return sum(this.root)
 
 
 
+ delete(value){
+    this.root = this.deleteNode(this.root,value)
+}
+
+ deleteNode(node,value){
+
+ if(node === null) return null
+
+if(value<node.value){
+    node.left = this.deleteNode(node.left,value)
+}else if(value>node.value){
+    node.right = this.deleteNode(node.right,value)
+}else {
+    if(!node.left) return node.right
+    if(!node.right) return node.left
+
+
+ let min = node.right
+
+ while(min.left){
+    min = min.left
+ }
+
+node.value = min.value
+
+node.right = this.deleteNode(node.result,min.value)
+
+
+}
+
+return node
+ }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -361,6 +403,9 @@ let tree = new BST()
 tree.insert(22)
 tree.insert(10)
 tree.insert(1)
+
+
+tree.delete(399)
 
 
 console.log(tree.search(10))
